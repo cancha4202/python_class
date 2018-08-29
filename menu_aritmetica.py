@@ -18,16 +18,13 @@ num2 = int(input("ingrese el segundo numero "))
 opc = int(input("digite la operacion a realizar "))
 
 if opc == 1 :
-	suma = num1 + num2
-	print ("la suma es: ",suma)
-	elif opc == 2 :
-		resta = num1 - num2
-		print ("la resta es: ",resta)
-	elif opc == 3 :
-		multiplicacion = num1 * num2
-		print ("la multiplicacion es: ",multiplicacion)	
-	elif opc == 4 :
-		division = num1 / num2
-		print ("la division es: ",division)
+	print ("la suma es: ",num1 + num2)
+elif opc == 2 :
+	print ("la resta es: ",num1 - num2)
+elif opc == 3 :
+	print ("la multiplicacion es: ",num1 * num2)
+elif opc == 4 :
+        print ("la division es: ",num1 / num2)
 else :
 	print ("igresar numero valido")	
+>>>>>>> c8dd6a9d944192b5a8d7bdbf22da1e0da49c3894
