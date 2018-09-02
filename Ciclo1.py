@@ -1,5 +1,5 @@
-num = int(input("ingresar tabla a resolver "))
-multip = 1
-while multip <= 10 :
-    print (num, "*", multip, "=", num * multip)
-    multip = multip + 1
+tabla = int(input("digite la tabla a multiplicar: "))
+num = 1
+while num <= 10 :
+	print (tabla, "*", num, "=", tabla * num) 
+	num = num + 1

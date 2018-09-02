@@ -1,8 +1,8 @@
 tabla = 1
-multip = 1
+rango = 1
 while tabla <= 10 :
-    print (tabla ,"*", multip, "=", tabla * multip)
+    rango = 1
+    while rango <= 10 :
+        print (tabla ,"*", rango, "=", tabla * rango)
+        rango = rango + 1
     tabla = tabla + 1
-while multip <= 10 :
-    print (tabla ,"*", multip, "=", tabla * multip)
-    multip = multip + 1
