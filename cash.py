@@ -1,8 +1,15 @@
 #cash.py
-intentos = 3
+import os
+os.system("cls")
+
+int_max = 3
+int_hech = 1
 clave_pred = 5096
 clave_i = int(input("digite clave de ingreso: "))
-while intentos >= 0 :
+
+while int_max > 1:
+    int_max = int_max - int_hech
+    print("le quedan", int_max - int_hech, "intentos")
     if clave_pred == clave_i :
         print("menu transaccional")
         print("1: cambiar clave")
@@ -10,7 +17,9 @@ while intentos >= 0 :
         print("3: realizar retiro")
         print("4: salir")
         print(".: digite opcion")
+        
     else :
-        print("clave no valida")
-        int_max = intentos - 1
-print("su cuenta ha sido bloqueada")
+        clave_i = int(input("digite clave de ingreso nuevamente: "))
+        
+        
+        
