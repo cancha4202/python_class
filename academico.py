@@ -1,12 +1,12 @@
 sumaedades = 0
 promedio = 0
-edad1 = 15
+edad1 = 16
 persona1 = ("Juan Carlos Arteaga")
-edad2 = 18
+edad2 = 41
 persona2 = ("Angela Maria Lopez")
-edad3 = 22
+edad3 = 25
 persona3 = ("Roberto Andres Jurado")
-edad4 = 19
+edad4 = 40
 persona4 = ("Monica Maribel Hurtado")
 print ("Sistema de  Informacion Academico - Promedio de Edades")
 sumaedades = edad1+edad2+edad3+edad4
