@@ -118,7 +118,3 @@ while int_max > 1:
 else :
     print("le quedan", int_max, - int_hech, "intentos")
     clave_i = int(input("digite clave de ingreso nuevamente: "))
-
-
-
-
