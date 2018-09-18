@@ -10,9 +10,8 @@ int_hech = 1
 clave_pred = 1
 clave_var = clave_pred
 clave_i = int(input("digite clave de ingreso: "))
-int_para_salir = int_max - int_hech
 
-while int_max > 1:
+while int_max > 0:
     int_max = int_max - int_hech
     if clave_pred == clave_i :
         int_max = 100
@@ -115,10 +114,17 @@ while int_max > 1:
         elif opc == 4:
             print("usted ha salido de su cuenta")
             break
-        else:
-            ("ingrese opcion valida")
+        
+        elif opc >= 5:
+            print("ingrese opcion valida")
 
-else :
-    if int_max < int_hech:
-        print("le quedan", int_para_salir, "intentos")
+        elif opc <= 0:
+            print("ingrese opcion valida")
+
+    else :
+        print("le quedan", int_max - int_hech, "intentos")
         clave_i = int(input("digite clave de ingreso nuevamente: "))
+    
+
+
+
