@@ -13,7 +13,9 @@ def menu():
     print ("2. Resta")
     print ("3. Multiplicacion")
     print ("4. Division")
-    print ("5. Raiz Cuadrada")
+    print ("5. Exponencial")
+    print ("6. Raiz del numero 1 respecto al numero 2")
+    
 
 def operaciones():
     if opc==1:
@@ -25,12 +27,15 @@ def operaciones():
     elif opc==4:
         print ("La Division es es: ",n1/n2)
     elif opc==5:
-        print ("La raiz cuadrada es: ",n1**n2)
-        
+        print ("La operacion exponencial es: ",n1**n2)
+    elif opc==6:
+        print ("La raiz del primer numero respecto al segundo es:", (n1**(1/n2)))
+
 def datos():
     global n1,n2
     n1=int(input("Digite el primer numero: "))
     n2=int(input("Digite el segundo numero: "))
+
 
 datos()
 menu()
