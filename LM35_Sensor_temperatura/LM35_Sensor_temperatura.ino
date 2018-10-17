@@ -30,12 +30,14 @@ void loop()
   {
     digitalWrite(ledAmar,LOW);
     digitalWrite(ledRojo,HIGH);
+    delay(1);
     digitalWrite(ledRojo,LOW);
   }
   if(tempC < 27)
   {
     digitalWrite(ledRojo,LOW);
     digitalWrite(ledAmar,HIGH);
+    delay(1);
     digitalWrite(ledAmar,LOW);
   }
 }
