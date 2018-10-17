@@ -26,18 +26,16 @@ void loop()
   //<30 amarillo
 
     
-  if(tempC >= 25)
+  if(tempC >= 27)
   {
     digitalWrite(ledAmar,LOW);
     digitalWrite(ledRojo,HIGH);
-    delay(500);
     digitalWrite(ledRojo,LOW);
   }
-  if(tempC < 25)
+  if(tempC < 27)
   {
     digitalWrite(ledRojo,LOW);
     digitalWrite(ledAmar,HIGH);
-        delay(500);
     digitalWrite(ledAmar,LOW);
   }
 }
