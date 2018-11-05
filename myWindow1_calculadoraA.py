@@ -2,6 +2,7 @@
 
 from tkinter import *
 import tkinter
+import math 
 
 #*****************************#
 
@@ -35,17 +36,10 @@ def operacion():
         opera = ("ERROR")
     input_text.set(opera)#mostrar resultado
 
-    
-    
-
-    
-
 #*******************************#
     
 input_text = StringVar()
 operador = ""
-
-
     
 #*******************************#
 #Pantalla
@@ -72,8 +66,7 @@ Botoncito_18 = Button(root, text = "SQR 2", width = 4 , height = 2, command = la
 Botoncito_19 = Button(root, text = "XsqrY", width = 4 , height = 2, command = lambda:btnClick('**(1/')).place(x=330,y=200)
 Botoncito_20 = Button(root, text = "(", width = 4 , height = 2, command = lambda:btnClick('(')).place(x=330,y=100)
 Botoncito_21 = Button(root, text = ")", width = 4 , height = 2, command = lambda:btnClick(')')).place(x=330,y=150)
-
-
+Botoncito_22 = Button(root, text = "π", width = 4 , height = 2, command = lambda:btnClick('3.141592654')).place(x=330,y=250)
 
 #Abrir ventana para el programa
 root.mainloop()
