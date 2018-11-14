@@ -23,6 +23,8 @@ color_boton=("gray77")
 
 #FUNCIONES
 
+
+
 def MainM():
     global ventana_2
     ventana_2 = tkinter.Tk()
@@ -75,6 +77,7 @@ def Doors():
     
 #*******************************#
 
+
 input_text_user = StringVar()
 Screen_text = ""
 
@@ -86,7 +89,7 @@ Display_key = Entry(ventana_login, font = ('times new roman', 20, 'bold'), width
 
 #*******************************#
 
-Btn_Acceso = Button(ventana_login, text = "Entrar", width = 10 , height = 2, command = MainM and login).place(x=30,y=430)
+Btn_Acceso = Button(ventana_login, text = "Entrar", width = 10 , height = 2, command = MainM).place(x=30,y=430)
 
 
 
