@@ -1,10 +1,6 @@
 
 #importar librerias para GUI
-##import serial
-##ser=serial.Serial('COM3',9600)
-##while 1:
-##    val=raw_imput("introduzca 1 para encender o 0 para apagar")
-##    ser.write(val)
+import serial
 from tkinter import *
 import tkinter
 
@@ -53,11 +49,11 @@ def Fans():
     global ventana_4
     ventana_4 = tkinter.Tk()
     ventana_4.title("Menu de Control")
-    ventana_4.geometry("200x90")
-    ventana_4.resizable(FALSE,FALSE)
+    ventana_4.geometry("175x130")
+    ventana_4.resizable(TRUE,TRUE)
     ventana_4.configure(background="#000000")
-    Btn_Fan_1 = Button(ventana_4, text = "Ventilador 1", width = 15 , height = 2, command = Fans).place(x=45,y=15)
-    Btn_Fan_2 = Button(ventana_4, text = "Ventilador 2", width = 15 , height = 2, command = Fans).place(x=45,y=75)
+    Btn_Fan_1 = Button(ventana_4, text = "Ventilador 1", width = 15 , height = 2, command = Fans).place(x=31.5,y=15)
+    Btn_Fan_2 = Button(ventana_4, text = "Ventilador 2", width = 15 , height = 2, command = Fans).place(x=31.5,y=75)
 
 def Doors():
     global ventana_5

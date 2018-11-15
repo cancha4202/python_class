@@ -4,23 +4,23 @@ import tkinter
 
 arduinoData = serial.Serial('COM3',9600)
 
-def led_on():
-    arduinoData.write(b'1')
+def led_on(valor):
+    arduinoData.write(b'valor')
     print("Encender")
-def led_off():
-    arduinoData.write(b'0')
+def led_off(valor):
+    arduinoData.write(b'valor')
     print("Apagar")
 
 led_control_window =Tk()
 #Button = Tkinter.Button
-btn1 = Button(led_control_window, text = "1_ON", command = led_on)
-btn2 = Button(led_control_window, text = "1_OFF", command = led_off)
-btn3 = Button(led_control_window, text = "2_ON", command = led_on)
-btn4 = Button(led_control_window, text = "2_OFF", command = led_off)
-btn5 = Button(led_control_window, text = "3_ON", command = led_on)
-btn6 = Button(led_control_window, text = "3_OFF", command = led_off)
-btn7 = Button(led_control_window, text = "ALL_ON", command = led_on)
-btn8 = Button(led_control_window, text = "ALL_OFF", command = led_off)
+btn1 = Button(led_control_window, text = "1 ON", command = lambda:led_on(0))
+btn3 = Button(led_control_window, text = "2 ON", command = lambda:led_on(2))
+btn5 = Button(led_control_window, text = "3 ON", command = lambda:led_on(4))
+btn7 = Button(led_control_window, text = "ALL ON", command = lambda:led_on(6))
+btn2 = Button(led_control_window, text = "1 OFF", command = lambda:led_off(1))
+btn4 = Button(led_control_window, text = "2 OFF", command = lambda:led_off(3))
+btn6 = Button(led_control_window, text = "3 OFF", command = lambda:led_off(5))
+btn8 = Button(led_control_window, text = "ALL OFF", command = lambda:led_off(7))
 
 
 
