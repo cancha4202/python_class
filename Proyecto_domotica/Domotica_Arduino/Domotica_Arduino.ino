@@ -57,108 +57,90 @@ void loop()
     Valor=Serial.read();
     Serial.print(Valor);
    }
-    else if (Valor == '0')
+    if (Valor == '0')
     {
       digitalWrite(LuzSala, HIGH);
     }
     else if (Valor == '0')
     {
       digitalWrite(LuzSala, LOW);
-    }      
-    else if (Valor == '1')
-    {
+    
+    }else if (Valor == '1'){
       digitalWrite(LuzBano, HIGH);
-    }
-    else if (Valor == '1')
-    {
+    
+    }else if (Valor == '1'){
       digitalWrite(LuzBano, LOW);
-    }
-        else if (Valor == '2')
-    {
+    
+    }else if (Valor == '2'){
       digitalWrite(LuzCocina, HIGH);
-    }
-    else if (Valor == '2')
-    {
+    
+    }else if (Valor == '2'){
       digitalWrite(LuzCocina, LOW);
-    }
-    else if (Valor == '3')
-    {
+    
+    }else if (Valor == '3'){
       digitalWrite(LuzGaraje, HIGH);
-    }
-    else if (Valor == '3')
-    {
+    
+    }else if (Valor == '3'){
       digitalWrite(LuzGaraje, LOW);
-    }      
-    else if (Valor == '4')
-    {
+    
+    }else if (Valor == '4'){
       ServoPG.write (angleA);
       delay(6000);
-    }
-    else if (Valor == '4')
-    {
+    
+    }else if (Valor == '4'){
       ServoPG.write (angleC);
       delay(6000);
-    }      
-    else if (Valor == '5')
-    {
+    
+    }else if (Valor == '5'){
       ServoPP.write (angleA);
       delay(6000);
-    }
-    else if (Valor == '5')
-    {
+    
+    }else if (Valor == '5'){
       ServoPP.write (angleC);
       delay(6000);
-    }
-
-    else if (Valor == '6')
-    {
+    
+    }else if (Valor == '6'){
       for  (i=1;i<255; i++){
       analogWrite(Fogon1,i);
       delay(5);
       }
-    else if (Valor == '6')
-    {
+      }else if (Valor == '6'){
       for  (i=255;i>0; i--){
       analogWrite(Fogon1,i);
       delay(5);
-      }      
-    else if (Valor == '7')
-    {
+      }
+      }else if (Valor == '7'){
       for  (i=1;i<255; i++){
       analogWrite(Fogon2,i);
       delay(5);
       }
-    else if (Valor == '7')
-    {
+      }else if (Valor == '7'){
       for  (i=255;i>0; i--){
       analogWrite(Fogon2,i);
       delay(5);
       }
-      
-    else if (Valor == '8')
-    {
+      }else if (Valor == '8'){
       for  (i=1;i<255; i++){
       analogWrite(Fogon3,i);
       delay(5);
       }
-    else if (Valor == '8')
-    {
+      }else if (Valor == '8'){
       for  (i=255;i>0; i--){
       analogWrite(Fogon3,i);
       delay(5);
-      }    
-    else if (Valor == '9')
-    {
+      }
+      }else if (Valor == '9'){
       for  (i=1;i<255; i++){
       analogWrite(Fogon4,i);
       delay(5);
       }
-    else if (Valor == '9')
-    {
+      }else if (Valor == '9'){
       for  (i=255;i>0; i--){
       analogWrite(Fogon4,i);
       delay(5);
       }
+      }
+}
       
 //    else if (Valor == "10")
 //    {
