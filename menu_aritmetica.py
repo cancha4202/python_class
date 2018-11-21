@@ -27,4 +27,5 @@ elif opc == 4 :
         print ("la division es: ",num1 / num2)
 else :
 	print ("igresar numero valido")	
->>>>>>> c8dd6a9d944192b5a8d7bdbf22da1e0da49c3894
+
+
