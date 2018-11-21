@@ -1,4 +1,4 @@
-#importar librerias para GUI
+﻿#importar librerias para GUI
 
 from tkinter import *
 import tkinter
@@ -11,7 +11,7 @@ root = tkinter.Tk()
 root.geometry("400x400")#WExHE or ALxAN
 root.title("MI CALCULADORA")
 
-#define si se puede o no cambiar el tamaño de la paguinaWExHE or ALxAN
+#define si se puede o no cambiar el tamaÃ±o de la paguinaWExHE or ALxAN
 root.resizable(FALSE,FALSE)
 root.configure(background="#17202A")#color fondo
 
