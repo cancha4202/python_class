@@ -1,4 +1,5 @@
-#importar librerias para GUI
+#Oscar Vargas
+#Cristian Bravo
 
 import serial
 from tkinter import *
@@ -8,8 +9,6 @@ arduinoData = serial.Serial('COM4',9600)
 
 #*****************************#
 
-
-#Crear ventana
 quiz = tkinter.Tk()
 quiz.geometry("400x400")
 quiz.title("MI CALCULADORA")

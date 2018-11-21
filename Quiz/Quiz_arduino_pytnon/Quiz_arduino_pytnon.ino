@@ -1,3 +1,6 @@
+//Oscar Vargas
+//Cristian Bravo
+
 char operador;
 int pinLed1 = 13, i=0;
 
@@ -14,12 +17,12 @@ void loop()
     operador = Serial.read();
     Serial.println(operador);
 
-  digitalWrite(pinLed1,HIGH);
-  /*while(i < operador){
+  while(i < operador){
     digitalWrite(pinLed1,HIGH);
-    delay(100);
+    delay(200);
     digitalWrite(pinLed1,LOW);
+    delay(200);
     i = i + 1;
-    }*/
+    }
   }
 }  
