@@ -318,7 +318,7 @@ int iF4 = 0;
                                                 for(angPP = 90; angPP = 0; angPP = angPP - 1){
                                                   ServoPP.write(angPP)
                                                   delay(15);
-                                                  SrPP = 0}}
+                                                  SrPP = 0
                                                 }else if(Valor == "14"){
                                                   if (SrPG == 0){
                                                     for(angPG = 0 ; angPG = 90; angPG = angPG + 1){
