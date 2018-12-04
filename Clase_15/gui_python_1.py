@@ -2,13 +2,13 @@ import serial
 from tkinter import *
 import tkinter
 
-arduinoData = serial.Serial('COM3',9600)
+#arduinoData = serial.Serial('COM3',9600)
 
 def led_on():
-    arduinoData.write(b'1')
+    #arduinoData.write(b'1')
     print("Encender")
 def led_off():
-    arduinoData.write(b'0')
+    #arduinoData.write(b'0')
     print("Apagar")
 
 led_control_window =Tk()

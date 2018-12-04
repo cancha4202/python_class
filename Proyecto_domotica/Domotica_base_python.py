@@ -6,7 +6,7 @@ import tkinter
 
 
 #*****************************#
-arduino = serial.Serial("COM3",9600)
+##arduinoData = serial.Serial("COM3",9600)
 
 
 #Crear ventana
@@ -20,6 +20,7 @@ color_boton=("gray77")
 #FUNCIONES
 
 def ON_OFF(valor):
+    valor = str(valor)
     arduinoData.write(b'valor')
     #print ("Encendido")
 

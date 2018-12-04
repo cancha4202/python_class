@@ -1,13 +1,16 @@
-char Valor;
-#include <Servo.h>
 
-Servo ServoPP;
+char Valor;//definimos el valor que llega desde python
+#include <Servo.h>//incluimos los servos
+
+Servo ServoPP;//nombramos los servos
 Servo ServoPG;
 
+//incluimos a la pantalla LCD
 #include <LiquidCrystal.h>
           LiquidCrystal lcd(7,6,5,4,3,2);
 
 
+//definimos variables
 float TempC;
 int SensorTC = 1;
 
@@ -65,8 +68,8 @@ int angPG = 0;
 
 void setup()
 {
+  // comolocamos los pines ya estipulados en forma de salida
   Serial.begin(9600);
-
   
   pinMode(LuzCocina, OUTPUT);
   pinMode(LuzBano, OUTPUT);
@@ -85,14 +88,16 @@ void setup()
   pinMode(LedAma,OUTPUT);
   pinMode(LedVerde,OUTPUT);
 
+//definimos los pines de los servos
   ServoPG.attach(10);
   ServoPP.attach(9);
-  
+//definimos cuantas filals y cuantas columnas tiene la pantalla LCD
   lcd.begin(16,2);
 }
  
 void loop()
 {
+  /*
   digitalWrite (LedRojo,HIGH);
   delay(4000);
   digitalWrite (LedRojo,LOW);
@@ -105,23 +110,27 @@ void loop()
   digitalWrite (LedAma,HIGH);
   delay(2000);
   digitalWrite (LedAma,LOW);
-  digitalWrite (LedRojo,HIGH);
+  digitalWrite (LedRojo,HIGH);*/
 
-  TempG = analogRead(SensorTG);
-  TempC = analogRead(SensorTC);
-  
+  TempG = analogRead(SensorTG);//pedimos la temperatura dentro del garaje
+  TempC = analogRead(SensorTC);//pedimos la temperatura dentro de la cocina
+
+  //definimos variables para el nivel de luz de los fogones
   int iF1 = 0;
   int iF2 = 0;
   int iF3 = 0;
   int iF4 = 0;
 
+  //probamos el funcionamiento de la pantalla LCD
   lcd.setCursor(0,1);
   lcd.print ("Funcionando");
-  
+
+    //lectura del numero enviado desde python de 0 hasta 15
     if(Serial.available()>0)
     { Valor=Serial.read();
       Serial.print(Valor);
 
+      //leemos la variable valor
       if (Valor=='0')
       {
         if (LuzSal==0)
