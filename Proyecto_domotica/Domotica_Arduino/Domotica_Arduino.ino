@@ -13,8 +13,20 @@ Servo ServoPG;
 float TempC;
 float TempG;
 
-  int SensorTC = 0, SensorTG = 0, td = 0, LF = 0, LuzCoc = 0, LuzSal = 0, LuzGar = 0, LuzBa = 0;
-  int LuzAl = 0, Fog1 = 0, Fog2 = 0, Fog3 = 0, Fog4 = 0, Ext = 0, Vent = 0, LuzLav = 0;
+  int SensorTG = 0;
+  int SensorTC = 0;
+  int td = 0;
+  int LF = 0;
+  int LuzCoc = 0;
+  int LuzSal = 0;
+  int LuzGar = 0;
+  int LuzBa = 0;
+  int LuzAl = 0;
+  int LuzLav = 0;
+  int Fog1 = 0;
+  int Fog2 = 0;
+  int Fog3 = 0;
+  int Fog4 = 0;
   
   int SrPP = 0;
   int angPP = 0;
@@ -22,33 +34,24 @@ float TempG;
   int SrPG = 0;
   int angPG = 0;
   
+  int LuzFuera = 72;
+  int LuzCocina = 22;
+  int LuzSala = 24;
+  int LuzGaraje = 50;
+  int LuzBano = 32;
+  int LuzAlcoba = 28;
+  int LuzLavadero = 34;
+  int Fogonz = 31;
+  int Fogonx = 33;
+  int Fogonc = 35;
+  int Fogonv = 37;
   
-  const int LuzFuera = 72;
+  int Extractor = 14;
+  int Ventilador = 15;
   
-  const int LuzCocina = 22;
-  
-  const int LuzSala = 24;
-  
-  const int LuzGaraje = 50;
-  
-  const int LuzBano = 32;
-  
-  const int LuzAlcoba = 28;
-  
-  const int LuzLavadero = 34;
-  
-  #define Fogonz 31
-  #define Fogonx 33
-  #define Fogonc 35
-  #define Fogonv 37
-  
-  const int Extractor = 14;
-  
-  const int Ventilador = 15;
-  
-  const int LedRojo = 51;
-  const int LedAma = 47;
-  const int LedVerde = 49;
+  int LedRojo = 51;
+  int LedAma = 47;
+  int LedVerde = 49;
   
   void setup()
   {
@@ -82,19 +85,6 @@ float TempG;
   
   void loop()
   {
-  digitalWrite (LedRojo,HIGH);
-  delay(4000);
-  digitalWrite (LedRojo,LOW);
-  digitalWrite (LedAma,HIGH);
-  delay(2000);
-  digitalWrite (LedAma,LOW);
-  digitalWrite (LedVerde,HIGH);
-  delay (4000);
-  digitalWrite (LedVerde,LOW);
-  digitalWrite (LedAma,HIGH);
-  delay(2000);
-  digitalWrite (LedAma,LOW);
-  
   TempG = analogRead(SensorTG);//pedimos la temperatura dentro del garaje
   TempG = (5.0 * TempG * 100)/1024.0;//convertimos temperatura a celcius
   TempC = analogRead(SensorTC);//pedimos la temperatura dentro de la cocina
@@ -107,6 +97,7 @@ float TempG;
       digitalWrite(Ventilador,LOW);
     }
   }
+  
   if(TempC > 30){
     digitalWrite(Extractor,HIGH);
   }else{
@@ -425,6 +416,21 @@ float TempG;
           td = 0;
           }
           }
+          if (Valor == 'q'){
+            digitalWrite (LedRojo,HIGH);
+            delay(4000);
+            digitalWrite (LedRojo,LOW);
+            digitalWrite (LedAma,HIGH);
+            delay(2000);
+            digitalWrite (LedAma,LOW);
+            digitalWrite (LedVerde,HIGH);
+            delay (4000);
+            digitalWrite (LedVerde,LOW);
+            digitalWrite (LedAma,HIGH);
+            delay(2000);
+            digitalWrite (LedAma,LOW);
+          }
+
        //#Mostrar temperatura de la cocina ###############################
        if(Valor == 'o'){
           lcd.setCursor(0,0);
