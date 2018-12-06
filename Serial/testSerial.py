@@ -4,7 +4,7 @@ import os
 
 opc = 'a'
 #*****************************#
-arduinoData = serial.Serial("COM10",9600)
+#arduinoData = serial.Serial("COM10",9600)
 
 #FUNCIONES
 def ON_OFF(valor):
