@@ -334,16 +334,16 @@ float TempG;
       }
       //#Puerta Principal ###############################
       if(Valor == 'l' and SrPP == 0){
-        for(angPP = 0; angPP <= 90; angPP = angPP + 1)
+        for(angPP = 0; angPP <= 90; angPP = angPP + 1){
           ServoPP.write(angPP);
           lcd.setCursor(0,0);
           lcd.print("Puerta Principal");
           lcd.setCursor(0,1);
           lcd.print("Abierta");
-          SrPP = 1;
+          SrPP = 1;}
         }else{
           if(Valor == 'l' and SrPP == 1){
-            for(angPP = 90; angPP <= 0; angPP = angPP - 1){
+            for(angPP = 90; angPP <= 0; angPP = angPP - 5){
               ServoPP.write(angPP);
               lcd.setCursor(0,0);
               lcd.print("Puerta Principal");
@@ -355,13 +355,13 @@ float TempG;
       }
       //#Garaje ###############################
       if(Valor == 'm' and SrPG == 0){
-        for(angPG = 0; angPG <= 90; angPG = angPG + 1)
+        for(angPG = 0; angPG <= 90; angPG = angPG + 5){
           ServoPP.write(angPG);
           lcd.setCursor(0,0);
           lcd.print("Garaje");
           lcd.setCursor(0,1);
           lcd.print("Abierto");
-          SrPG = 1;
+          SrPG = 1;}
         }else{
           if(Valor == 'm' and SrPG == 1){
             for(angPG = 90; angPG <= 0; angPG = angPG - 1){
@@ -430,9 +430,11 @@ float TempG;
             delay(2000);
             digitalWrite (LedAma,LOW);
           }
-
        //#Mostrar temperatura de la cocina ###############################
        if(Valor == 'o'){
+          TempC = analogRead(SensorTC);
+          TempC = (5.0 * TempC * 100)/1024.0;
+          Serial.println(TempC);
           lcd.setCursor(0,0);
           lcd.print("Temp Cocina");
           lcd.setCursor(0,1);
@@ -440,6 +442,9 @@ float TempG;
        }
        //#Mostrar temperatura del garaje ###############################
        if(Valor == 'p'){
+          TempG = analogRead(SensorTG);
+          TempG = (5.0 * TempG * 100)/1024.0;
+          Serial.println(TempG);
           lcd.setCursor(0,0);
           lcd.print("Temp Garaje");
           lcd.setCursor(0,1);
