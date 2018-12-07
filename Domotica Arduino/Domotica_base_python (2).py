@@ -6,7 +6,7 @@ import tkinter
 
 
 #*****************************#
-arduinoData = serial.Serial("COM3",9600)
+arduinoData = serial.Serial("COM10",9600)
 
 
 #Crear ventana
