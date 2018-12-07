@@ -1,4 +1,5 @@
-
+#Oscar Vargas
+#Cristian Bravo
 #importar librerias para GUI
 import serial
 from tkinter import *

@@ -1,3 +1,5 @@
+//Oscar Vargas
+//Cristian Bravo
 char Valor;//definimos el valor que llega desde python
 #include <Servo.h>//incluimos los servos
 
